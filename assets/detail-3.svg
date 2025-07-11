@@ -1,0 +1,48 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="400" height="400" fill="#F2EEE9"/>
+    
+    <!-- Main Surface -->
+    <circle cx="200" cy="200" r="160" fill="#D7C9B6"/>
+    
+    <!-- Embossed Logo Design -->
+    <g transform="translate(200,200)" fill="none" stroke="#3A332D" stroke-width="2">
+        <!-- Outer Circle -->
+        <circle cx="0" cy="0" r="80" stroke-width="4" opacity="0.1"/>
+        
+        <!-- Inner Circle -->
+        <circle cx="0" cy="0" r="60" stroke-width="3" opacity="0.2"/>
+        
+        <!-- Sound Wave Pattern -->
+        <g opacity="0.15">
+            <path d="M-40 0 Q-20 -20 0 0 Q20 20 40 0" />
+            <path d="M-50 15 Q-25 -5 0 15 Q25 35 50 15" />
+            <path d="M-50 -15 Q-25 5 0 -15 Q25 -35 50 -15" />
+        </g>
+        
+        <!-- Central R Logo -->
+        <g transform="translate(-15,-20)" stroke-width="3">
+            <path d="M0 0 v40 M0 0 h25 a15 15 0 0 1 0 20 h-25 M25 20 l15 20" />
+        </g>
+    </g>
+    
+    <!-- Texture Details -->
+    <g opacity="0.05">
+        <pattern id="grain" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+            <rect width="10" height="10" fill="#3A332D">
+                <animate attributeName="opacity"
+                         values="0.1;0.15;0.1"
+                         dur="3s"
+                         repeatCount="indefinite"/>
+            </rect>
+        </pattern>
+        <circle cx="200" cy="200" r="160" fill="url(#grain)"/>
+    </g>
+    
+    <!-- Highlight Effect -->
+    <path d="M200 40 A160 160 0 0 1 360 200" 
+          stroke="#FFFFFF" 
+          stroke-width="2" 
+          fill="none" 
+          opacity="0.3"/>
+</svg>

@@ -1,0 +1,29 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background Gradient -->
+    <defs>
+        <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#F6C38B;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#F9DEC8;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <rect width="800" height="600" fill="url(#grad)"/>
+    
+    <!-- Stylized Person Silhouette -->
+    <path d="M400 150
+             C430 150 450 170 450 200
+             C450 230 430 250 400 250
+             C370 250 350 230 350 200
+             C350 170 370 150 400 150Z"
+          fill="#3A332D"/>
+    
+    <!-- Headphones on Person -->
+    <path d="M350 200 L300 200 C280 200 270 220 270 240 L270 260
+             M450 200 L500 200 C520 200 530 220 530 240 L530 260"
+          stroke="#D7C9B6" stroke-width="20" fill="none"/>
+    
+    <!-- Body Silhouette -->
+    <path d="M350 250 L350 400
+             M450 250 L450 400
+             M350 400 Q400 420 450 400"
+          stroke="#3A332D" stroke-width="40" fill="none" stroke-linecap="round"/>
+</svg>

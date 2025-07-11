@@ -1,0 +1,32 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="400" height="400" fill="#F2EEE9"/>
+    
+    <!-- Headphone Band Detail -->
+    <path d="M50 150 C50 50 350 50 350 150" 
+          fill="#D7C9B6" 
+          stroke="#7B8A46" 
+          stroke-width="4"/>
+    
+    <!-- Leather Texture -->
+    <g opacity="0.15">
+        <pattern id="leather" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+            <circle cx="10" cy="10" r="1" fill="#3A332D"/>
+            <path d="M0 0 L20 20 M20 0 L0 20" stroke="#3A332D" stroke-width="0.5"/>
+        </pattern>
+        <path d="M50 150 C50 50 350 50 350 150" fill="url(#leather)"/>
+    </g>
+    
+    <!-- Embossed Logo -->
+    <g transform="translate(175,100)">
+        <circle cx="25" cy="25" r="20" fill="none" stroke="#D7B488" stroke-width="2"/>
+        <path d="M15 25 h20 M25 15 v20" stroke="#D7B488" stroke-width="2"/>
+    </g>
+    
+    <!-- Material Highlight -->
+    <path d="M50 150 C50 50 350 50 350 150" 
+          fill="none"
+          stroke="#FFFFFF"
+          stroke-width="2"
+          opacity="0.3"/>
+</svg>
