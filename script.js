@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Hamburger Menu Functionality
+    // 1. Hamburger Menu Functionality
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
 
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- Detail images card animation ---
+    // 2. Detail Spread images card animation ---
     const detailSection = document.querySelector('.details');
     const dynamicHeading = document.getElementById('dynamic-heading');
     const dynamicParagraph = document.getElementById('dynamic-paragraph');
@@ -24,14 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const detailImages = document.querySelectorAll('.detail-images img');
 
     // Initial content for the text and button
-    const initialHeadingText = "Every Detail Matters";
-    const initialParagraphText = "From the stitching to the sound signature, made with care";
-    const initialButtonText = "";
+    const initialHeadingText = "🚀 Featured Projects";
+    const initialParagraphText = "Here are some of my recent projects that showcase my skills in full-stack development";
 
     // Content for the fanned state
-    const fannedHeadingText = "Every Detail Matters";
-    const fannedParagraphText = "From the stitching to the sound signature, made with care";
-    const fannedButtonText = "";
+    const fannedHeadingText = "🚀 Featured Projects";
+    const fannedParagraphText = "Click on each image for live demos...";
 
     const sectionObserverOptions = {
         root: null,
@@ -71,16 +69,22 @@ document.addEventListener('DOMContentLoaded', () => {
     if (detailSection) {
         sectionObserver.observe(detailSection);
     }
+    
 
-    // --- Existing JavaScript functionalities ---
+
+
+    // 3. Background Color Changing Existing JavaScript functionalities ---
     const colorButtons = document.querySelectorAll('.color-btn');
-    const headphoneVariants = document.querySelectorAll('.headphone-variant');
+    const headphoneVariants = document.querySelectorAll('.card-variant');
     const colorPickerSection = document.querySelector('.color-picker');
 
     const colors = {
         mustard: '#E6B84A',
         olive: '#7B8A46',
-        maroon: '#853D3A'
+        maroon: '#853D3A',
+        burnt: '#E87C44',
+        dustyBlue: '#5A7684',
+        plum: '#7E4E60'
     };
 
     let currentIndex = -1;
@@ -122,6 +126,63 @@ document.addEventListener('DOMContentLoaded', () => {
         colorPickerSection.classList.add('active');
     }
 
+
+
+    // 4. Contact Form 
+    document.getElementById("sendMessageBtn").addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("userName").value.trim();
+        const email = document.getElementById("userEmail").value.trim();
+        const project = document.getElementById("projectType").value;
+        const budget = document.getElementById("budgetRange").value;
+        const details = document.getElementById("projectDetails").value.trim();
+
+        const subject = `New Project Inquiry from ${name}`;
+        const body =
+            `Name: ${name}\n` +
+            `Email: ${email}\n` +
+            `Project Type: ${project}\n` +
+            `Budget: ${budget}\n\n` +
+            `Project Details:\n${details}`;
+
+        const mailtoLink = `mailto:kshree6574@mail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailtoLink;
+    });
+
+
+    document.getElementById("openEmail").addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        const subject = `New Project Inquiry from`;
+        const body =" ";
+        const mailtoLink = `mailto:kshree6574@mail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailtoLink;
+    });
+
+    // 5. Image Reduirect 
+
+    const redirects = {
+        p1: "https://camsolution.netlify.app/",
+        p2: "https://kalrix.netlify.app/",
+        p3: "https://sweetdreambakery.netlify.app/",
+        p4: "https://pdfit.fun/",
+        p5: "https://resonanceh.netlify.app/",
+        p6: "https://github.com/shreext/twitter/tree/main"
+    };
+
+    Object.keys(redirects).forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+            el.style.cursor = "pointer"; // Optional: show hand cursor
+            el.addEventListener("click", () => {
+                window.location.href = redirects[id];
+            });
+        }
+    });
+
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -144,31 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, { threshold: 0.1 });
 
+
     fadeElements.forEach(element => fadeObserver.observe(element));
 
-    const lifestyleImages = document.querySelectorAll('.lifestyle-img');
-    const lifestyleObserver = new IntersectionObserver(entries => {
-        if (entries[0].isIntersecting) {
-            lifestyleImages.forEach((img, index) => {
-                setTimeout(() => {
-                    img.classList.add('active');
-                }, index * 400);
-            });
-            lifestyleObserver.unobserve(entries[0].target);
-        }
-    }, { threshold: 0.5, rootMargin: '50px' });
-
-    const lifestyleSection = document.querySelector('.lifestyle-images');
-    if (lifestyleSection) {
-        lifestyleObserver.observe(lifestyleSection);
-    }
-
-    const dreamlikeSection = document.querySelector('.dreamlike');
-    window.addEventListener('scroll', () => {
-        if (dreamlikeSection) {
-            const scrolled = window.pageYOffset;
-            const rate = scrolled * 0.3;
-            dreamlikeSection.style.backgroundPosition = `center ${rate}px`;
-        }
-    });
 });

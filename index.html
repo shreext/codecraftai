@@ -1,95 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resonance - Aura Pro II</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="elements.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
+    <!-- NavBar -->
     <nav class="nav">
-        <div class="nav-logo">Resonance</div>
+        <div class="nav-logo">
+            <div class="loader">
+                <span class="nav_bar"></span>
+                <span class="nav_bar"></span>
+                <span class="nav_bar"></span>
+                <span style="margin-left: 5px;">CodeCraft</span>
+            </div>
+        </div>
         <button class="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
             <span></span>
             <span></span>
             <span></span>
         </button>
         <div class="nav-links">
             <a href="index.html">Home</a>
-            <a href="#sectionTwo">Tech Specs</a>
-            <button class="btn-compare"><a href="#sectionFour">Compare</a></button>
+            <a href="#about">About</a>
+            <a href="#services">Service</a>
+            <a href="#projects">Project</a>
+            <a href="#contact">Contact</a>
         </div>
     </nav>
 
-    <section id="sectionOne" class="hero">
-        <h2 class="hero-background-text">Aura Pro II</h2>
-        <div class="hero-headphone">
-            <img src="assets/headImage.png" alt="Aura Pro II Headphones" id="rotating-headphone">
+    <!-- Hero Section -->
+    <section id="herosection" class="hero">
+        <h2 class="hero-background-text">Code, Create, Deploy</h2>
+        <!-- From Uiverse.io by codebykay101 -->
+        <div class="container">
+            <div data-text="Web Apps" style="--r:-15;" class="glass">
+                <svg viewBox="0 0 496 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                    </path>
+                </svg>
+            </div>
+            <div data-text="Mobie Apps" style="--r:5;" class="glass">
+                <svg viewBox="0 0 640 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z">
+                    </path>
+                </svg>
+            </div>
+            <div data-text="UI/UX" style="--r:25;" class="glass">
+                <svg viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M64 64C28.7 64 0 92.7 0 128V384c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64H64zm64 320H64V320c35.3 0 64 28.7 64 64zM64 192V128h64c0 35.3-28.7 64-64 64zM448 384c0-35.3 28.7-64 64-64v64H448zm64-192c-35.3 0-64-28.7-64-64h64v64zM288 160a96 96 0 1 1 0 192 96 96 0 1 1 0-192z">
+                    </path>
+                </svg>
+            </div>
         </div>
-        <h1 class="hero-title">Resonance</h1>
+        <!-- From Uiverse.io by Galahhad -->
+        <a href="#contact"> <button class="ui-btn">
+                <span>
+                    Get Free Demo
+                </span>
+            </button></a>
+        <h1 class="hero-title">Full-Stack Developer</h1>
     </section>
 
-    <section id="sectionTwo" class="color-picker">
-        <h2 style="color: #3A332D;">Your Style. Your Sound.</h2>
-        <p style="color: rgb(99, 99, 99);">Sculpt your sound with the perfect color that matches your style</p>
-        <div class="headphones-display">
-            <div class="headphone-variant mustard active">
-                <img src="assets/headphoneIcon3.png" alt="Mustard Headphones">
+    <!-- About Section -->
+    <section id="about" class="bg-[#f5c99c] text-gray-800 px-6 md:px-20 py-16 space-y-16" class="lifestyle">
+
+        <!-- Top: About & Image -->
+        <div class="flex flex-col md:flex-row items-center gap-10">
+            <!-- Profile Image -->
+            <div class="rounded-3xl bg-gradient-to-br from-yellow-500 via-purple-700 to-purple-900 p-2 shadow-lg">
+                <img src="assets/profile.png" alt="Anant Shree"
+                    class="w-60 h-60 md:w-80 md:h-80 object-cover rounded-2xl" />
+                <!-- <img src="assets/avatar.jpg" alt="CodeCraft AI"
+                    class="w-60 h-60 md:w-80 md:h-80 object-cover rounded-2xl" /> -->
             </div>
-            <div class="headphone-variant olive">
-                <img src="assets/headphoneIcon1.png" alt="Olive Headphones">
-            </div>
-            <div class="headphone-variant maroon">
-                <img src="assets/headphoneIcon2.png" alt="Maroon Headphones">
+
+            <!-- About Me Content -->
+            <div class="flex-1">
+                <h2 class="text-4xl font-bold mb-4">👋 About Me</h2>
+                <p class="mb-4 text-lg">
+                    Hi! I'm <span class="text-orange-700 font-semibold">Anant Shree</span>, a passionate full-stack
+                    developer with over 3 years of experience
+                    creating stunning digital experiences. I specialize in building modern, responsive applications that
+                    work seamlessly across all devices.
+                </p>
+                <p class="text-lg">
+                    From simple websites to complex web applications and mobile apps, I bring ideas to life with clean
+                    code, beautiful design, and exceptional user experience.
+                    Every project I work on is crafted with attention to detail and built for performance.
+                </p>
             </div>
         </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+            <!-- Why Choose Me -->
+            <div class="bg-gradient-to-br from-orange-300 via-yellow-100 to-white p-6 rounded-xl shadow-lg">
+                <h3 class="text-2xl font-bold mb-4 text-gray-800">✨ Why Choose Me?</h3>
+                <ul class="list-disc pl-5 space-y-2 text-gray-700 text-sm">
+                    <li>Fast delivery with high-quality code</li>
+                    <li>Responsive design for all devices</li>
+                    <li>Modern UI/UX with dark mode support</li>
+                    <li>Free 1-year maintenance & support</li>
+                    <li>Direct communication & quick responses</li>
+                </ul>
+            </div>
+
+            <!-- Technologies Grid with Mustard, Olive, Maroon Colors -->
+            <div class="grid grid-cols-2 sm:grid-cols-2 gap-4">
+                <div
+                    class="p-4 rounded-lg text-white text-sm font-semibold bg-[#7B8A46] shadow hover:scale-105 transition-all">
+                    React & Next.js</div>
+                <div
+                    class="p-4 rounded-lg text-white text-sm font-semibold bg-[#7B8A46] shadow hover:scale-105 transition-all">
+                    Node.js & Express</div>
+                <div
+                    class="p-4 rounded-lg text-white text-sm font-semibold bg-[#7B8A46] shadow hover:scale-105 transition-all">
+                    TypeScript</div>
+                <div
+                    class="p-4 rounded-lg text-white text-sm font-semibold bg-[#7B8A46] shadow hover:scale-105 transition-all">
+                    MongoDB</div>
+                <div
+                    class="p-4 rounded-lg text-white text-sm font-semibold bg-[#7B8A46] shadow hover:scale-105 transition-all">
+                    HTML, CSS & JS</div>
+                <div
+                    class="p-4 rounded-lg text-white text-sm font-semibold bg-[#7B8A46] shadow hover:scale-105 transition-all">
+                    Tailwind CSS</div>
+                <div
+                    class="p-4 rounded-lg text-white text-sm font-semibold bg-[#7B8A46] shadow hover:scale-105 transition-all">
+                    Python & Flask</div>
+                <div
+                    class="p-4 rounded-lg text-white text-sm font-semibold bg-[#7B8A46] shadow hover:scale-105 transition-all">
+                    Docker</div>
+                <div
+                    class="p-4 rounded-lg text-white text-sm font-semibold bg-[#7B8A46] shadow hover:scale-105 transition-all">
+                    Java & XML</div>
+                <div
+                    class="p-4 rounded-lg text-white text-sm font-semibold bg-[#7B8A46] shadow hover:scale-105 transition-all">
+                    Android Development</div>
+            </div>
+        </div>
+
+
+
+    </section>
+
+
+    <section id="services" class="color-picker">
+        <h2 style="color: #3A332D; font-weight: bolder;">🧩 I Specialize In</h2>
+        <p style="color: rgb(255, 255, 255);">From simple websites to complex applications, I deliver production-ready
+            solutions</p>
+        <div class="headphones-display">
+
+            <div class="card-variant mustard active">
+                <img src="assets/s1.png" alt="Mustard Headphones">
+            </div>
+            <div class="card-variant olive">
+                <img src="assets/s2.png" alt="Olive Headphones">
+            </div>
+            <div class="card-variant maroon">
+                <img src="assets/s3.png" alt="Maroon Headphones">
+            </div>
+            <div class="card-variant burnt">
+                <img src="assets/s4.png" alt="Burnt Headphones">
+            </div>
+            <div class="card-variant dustyBlue">
+                <img src="assets/s5.png" alt="Dusty Blue Headphones">
+            </div>
+            <div class="card-variant plum">
+                <img src="assets/s6.png" alt="Plum">
+            </div>
+        </div>
+
         <div class="color-buttons">
             <button class="color-btn mustard active" data-color="mustard"></button>
             <button class="color-btn olive" data-color="olive"></button>
             <button class="color-btn maroon" data-color="maroon"></button>
+            <button class="color-btn burnt" data-color="burnt"></button>
+            <button class="color-btn dustyBlue" data-color="dustyBlue"></button>
+            <button class="color-btn plum" data-color="plum"></button>
         </div>
+
     </section>
 
-    <section id="sectionThree" class="lifestyle">
-        <div class="lifestyle-content">
-            <h2>Deep tones. Light mids.<br>All blends in perfectly in balance.</h2>
-            <p style="color: rgb(99,99,99);">Experience sound that adapts to your unique hearing profile</p>
-        </div>
-        <div class="lifestyle-images">
-            <img src="assets/fSection1.png" alt="Deep lows" class="lifestyle-img">
-            <img src="assets/fSection2.png" alt="Silence distractions" class="lifestyle-img">
-            <img src="assets/fSection3.png" alt="High quality materials" class="lifestyle-img">
-        </div>
-    </section>
-
-    <section id="sectionFour" class="details">
-        <h2 id="dynamic-heading">Every Detail Matters</h2>
-        <p id="dynamic-paragraph">From the stitching to the sound signature, made with care</p>
+    <section id="projects" class="details">
+        <h2 id="dynamic-heading">🚀 Featured Projects</h2>
+        <p id="dynamic-paragraph" style="color: rgb(255, 255, 255);">Here are some of my recent projects that showcase
+            my skills in full-stack development
+        </p>
         <div class="detail-images">
-            <img src="assets/hDetail1.png" alt="Headphone detail 1" class="detail-img">
-            <img src="assets/hDetail2.png" alt="Headphone detail 2" class="detail-img">
-            <img src="assets/hDetail3.png" alt="Headphone detail 3" class="detail-img">
-            <img src="assets/hDetail4.png" alt="Headphone detail 4" class="detail-img">
-            <img src="assets/hDetail5.png" alt="Headphone detail 5" class="detail-img">
-            <img src="assets/hDetail6.png" alt="Headphone detail 6" class="detail-img">
+            <img src="assets/p1.png" alt="Headphone detail 1" class="detail-img" id="p1">
+            <img src="assets/p2.png" alt="Headphone detail 2" class="detail-img" id="p2">
+            <img src="assets/p3.png" alt="Headphone detail 3" class="detail-img" id="p3">
+            <img src="assets/p4.png" alt="Headphone detail 4" class="detail-img" id="p4">
+            <img src="assets/p5.png" alt="Headphone detail 5" class="detail-img" id="p5">
+            <img src="assets/p6.png" alt="Headphone detail 6" class="detail-img" id="p6">
         </div>
     </section>
 
-    <footer>
-        <div class="footer-content">
-            <h2>Sound. Presence. Purpose.</h2>
-            <p style="color: rgb(130, 130, 130);">Join our community of audio enthusiasts</p>
-            <div class="footer-buttons">
-                <button class="button">Learn More</button>
-                <button class="button">Shop</button>
+    <section id="contact" class="w-full py-16 px-4 md:px-16 text-white" style="background: #3A332D;">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <!-- Contact Form -->
+            <div class="bg-[#3A332D] rounded-xl p-6 shadow-lg">
+                <h2 class="text-2xl font-bold mb-6">Send Me a Message</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <label class="block text-sm mb-1">Name</label>
+                        <input type="text" id="userName" placeholder="Your name"
+                            class="w-full px-4 py-2 rounded-md bg-[#4B4440] text-white border border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm mb-1">Email</label>
+                        <input type="email" id="userEmail" placeholder="youremail@gmail.com"
+                            class="w-full px-4 py-2 rounded-md bg-[#4B4440] text-white border border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <label class="block text-sm mb-1">Project Type</label>
+                        <select id="projectType"
+                            class="w-full px-4 py-2 rounded-md bg-[#4B4440] text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option>Select project type</option>
+                            <option>Website</option>
+                            <option>App</option>
+                            <option>Design</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm mb-1">Budget Range</label>
+                        <select id="budgetRange"
+                            class="w-full px-4 py-2 rounded-md bg-[#4B4440] text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option>Select budget</option>
+                            <option>₹5,000 - ₹10,000</option>
+                            <option>₹10,000 - ₹25,000</option>
+                            <option>₹25,000+</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <label class="block text-sm mb-1">Project Details</label>
+                    <textarea id="projectDetails" rows="4" placeholder="Tell me about your project requirements..."
+                        class="w-full px-4 py-2 rounded-md bg-[#4B4440] text-white focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                </div>
+
+                <button id="sendMessageBtn" class="contact-btn w-fit px-4 py-2">
+                    <div class="svg-wrapper-1">
+                        <div class="svg-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30"
+                                class="icon">
+                                <path
+                                    d="M22,15.04C22,17.23 20.24,19 18.07,19H5.93C3.76,19 2,17.23 2,15.04C2,13.07 3.43,11.44 5.31,11.14C5.28,11 5.27,10.86 5.27,10.71C5.27,9.33 6.38,8.2 7.76,8.2C8.37,8.2 8.94,8.43 9.37,8.8C10.14,7.05 11.13,5.44 13.91,5.44C17.28,5.44 18.87,8.06 18.87,10.83C18.87,10.94 18.87,11.06 18.86,11.17C20.65,11.54 22,13.13 22,15.04Z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <span>Send</span>
+
+                </button>
+            </div>
+
+            <!-- Direct Contact & CTA -->
+            <div class="space-y-6">
+                <div class="bg-[#3A332D] rounded-xl p-6 shadow-lg space-y-4">
+                    <h3 class="text-2xl font-bold">Direct Contact</h3>
+
+                    <div class="flex items-center gap-3">
+                        <div class="bg-[#3a2e2b] p-2 rounded-full">💬</div>
+                        <div>
+                            <p class="font-medium">WhatsApp</p>
+                            <p class="text-sm text-gray-300">+91 95088 91704</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <div class="bg-[#2a3d55] p-2 rounded-full">📧</div>
+                        <div>
+                            <p class="font-medium">Email</p>
+                            <p class="text-sm text-gray-300">kshree6574@gmail.com</p>
+                            <button class="mt-1 px-3 py-1 bg-[#853D3A] rounded-md text-sm" id="openEmail">Open Email
+                                Client</button>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <div class="bg-[#2c4c3a] p-2 rounded-full">📍</div>
+                        <div>
+                            <p class="font-medium">Location</p>
+                            <p class="text-sm text-gray-300">India</p>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
-        <div class="footer-bar">
-            <div class="footer-logo">Resonance</div>
-            <p style="color: rgb(255, 255, 255);">Made with ❤️ by Anant Shree & AI © 2024 Resonance. All rights reserved.</p>
+
+    </section>
+
+    <footer class="bg-[#3A332D] text-white py-12 px-6 md:px-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+            <!-- Logo & About -->
+            <div>
+                <div class="flex items-center gap-2 mb-3">
+                    <div class="loader">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                    <h3 class="text-xl font-bold">CodeCraft AI</h3>
+                </div>
+                <p class="text-sm text-gray-300 mb-4">
+                    Full-stack developer creating stunning digital experiences that work perfectly across all
+                    devices.
+                </p>
+                <p class="text-sm text-gray-400">
+                    Made with ❤️ &nbsp; &lt;/&gt; &nbsp; 🔥
+                </p>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Services</h4>
+                <ul class="space-y-2 text-sm text-gray-300">
+                    <li><a href="#services"> Responsive Websites</a></li>
+                    <li><a href="#services"> Custom Web Apps</a></li>
+                    <li><a href="#services"> Mobile Apps</a></li>
+                    <li><a href="#services"> Online Stores</a></li>
+                    <li><a href="#services"> UI/UX Design</a></li>
+                    <li><a href="#services"> Maintenance & Support</a></li>
+                </ul>
+            </div>
+
+            <!-- Get In Touch -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Get In Touch</h4>
+                <ul class="space-y-3 text-sm text-gray-300">
+                    <li class="flex items-center gap-2">📧 kshree6574@gmail.com</li>
+                    <li class="flex items-center gap-2">📱 +91 95088 91704</li>
+                    <li class="flex items-center gap-2 socialIcons"><a
+                            href="https://www.instagram.com/codecraft.aii/">📍 Instagram</a></li>
+                    <li class="flex items-center gap-2 socialIcons"><a href="https://www.linkedin.com/in/shreext/">💡
+                            LinkedIn</a></li>
+                </ul>
+
+                <button class="mt-4 bg-[#E87C44] to-red-500 text-white font-semibold px-4 py-2 rounded-md"><a
+                        href="#contact">
+                        Start Your Project</a>
+                </button>
+            </div>
+        </div>
+
+        <!-- Bottom Line -->
+        <div class="mt-10 border-t border-gray-600 pt-6 text-center text-sm text-gray-400">
+            © 2025 CodeCraft AI. All rights reserved. | Building the future, one pixel at a time. | Code, Create &
+            Deploy.
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
