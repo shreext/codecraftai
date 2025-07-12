@@ -449,6 +449,17 @@ button {
     transform: translate(-50%, -50%) translateX(330px) translateY(0px) rotate(25deg) scale(1.12);
 }
 
+
+/* Buy Product */
+.buyProduct {
+    padding: 6rem 5%;
+    background: linear-gradient(to bottom, #ffc188, #ffb16a);
+
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
 /* Footer */
 footer {
     background-color: var(--primary-color);
@@ -1407,4 +1418,8 @@ footer {
     .detail-images.fanned img:nth-child(6) {
         transform: translate(-50%, -50%) translateX(450px) translateY(0px) rotate(30deg) scale(1.02);
     }
+}
+
+#buy_product {
+    font-family: var(--main-font);
 }

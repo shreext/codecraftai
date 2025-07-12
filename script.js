@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (detailSection) {
         sectionObserver.observe(detailSection);
     }
-    
+
 
 
 
@@ -89,6 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentIndex = -1;
 
+    // Initial display setup after 500ms
     setTimeout(() => {
         const firstVariant = headphoneVariants[0];
         if (firstVariant) {
@@ -99,32 +100,56 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, 500);
 
+    // Function to activate a color
+    function activateColor(index) {
+        const button = colorButtons[index];
+        const color = button.dataset.color;
+
+        currentIndex = index;
+
+        colorButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        headphoneVariants.forEach(variant => variant.classList.remove('active'));
+
+        colorPickerSection.style.backgroundColor = colors[color];
+        colorPickerSection.classList.add('active');
+
+        setTimeout(() => {
+            const targetVariant = headphoneVariants[index];
+            if (targetVariant) {
+                targetVariant.classList.add('active');
+            }
+        }, 200);
+    }
+
+    // Start auto cycle every 1 second
+    let autoIndex = 0;
+    let autoInterval;
+
+    function startAutoCycle() {
+        autoInterval = setInterval(() => {
+            activateColor(autoIndex);
+            autoIndex = (autoIndex + 1) % colorButtons.length;
+        }, 1000);
+    }
+
+    // Stop auto on manual click and apply selected color
     colorButtons.forEach((button, index) => {
         button.addEventListener('click', () => {
-            const color = button.dataset.color;
-            currentIndex = index;
-
-            colorButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-
-            headphoneVariants.forEach(variant => variant.classList.remove('active'));
-
-            colorPickerSection.style.backgroundColor = colors[color];
-            colorPickerSection.classList.add('active');
-
-            setTimeout(() => {
-                const targetVariant = headphoneVariants[currentIndex];
-                if (targetVariant) {
-                    targetVariant.classList.add('active');
-                }
-            }, 200);
+            clearInterval(autoInterval);
+            activateColor(index);
         });
     });
 
+    // Fallback if background not set
     if (colorPickerSection && !colorPickerSection.style.backgroundColor) {
         colorPickerSection.style.backgroundColor = colors['mustard'];
         colorPickerSection.classList.add('active');
     }
+
+    // Start auto rotation
+    startAutoCycle();
 
 
 
@@ -156,12 +181,12 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
 
         const subject = `New Project Inquiry from`;
-        const body =" ";
+        const body = " ";
         const mailtoLink = `mailto:kshree6574@mail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         window.location.href = mailtoLink;
     });
 
-    // 5. Image Reduirect 
+    // 5. Image Redirect 
 
     const redirects = {
         p1: "https://camsolution.netlify.app/",
